@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'home_page_model.dart';
@@ -69,7 +70,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Text(
-                'Meu primeiro texto',
+                valueOrDefault<String>(
+                  functions.newCustomFunction(),
+                  '0',
+                ),
                 style: FlutterFlowTheme.of(context).bodyMedium,
               ),
             ],
